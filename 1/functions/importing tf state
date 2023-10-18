@@ -1,0 +1,9 @@
+terraform init -backend-config="access_key=ENTER ACCESS KEY" -backend-config="secret_key=ENTER SECRET KEY" -backend-config="region=us-east-1"
+
+create main.tf on the new pc
+configure provider
+configure backend as in the older pc
+
+run the above command to import terraform state
+
+this enables the new developer to work with the same state

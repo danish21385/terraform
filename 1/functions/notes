@@ -1,0 +1,45 @@
+Terraform
+
+terraform validate   to validate if the configuration is valid and there are no syntax errors
+
+terraform fmt   to format the styling of your .tf files
+
+terraform state list    to list the resource terraform created, this comes from the .tfstate file
+
+terraform destroy -target aws_vpc.vpc1   to destroy a particular resource. the resource target (e.g. aws_vpc.vpc1) could be obtained by running terraform state list command
+
+terraform state pull    to read the state file
+
+terraform state rm  aws_vpc.vpc1  (remove entry from state file if the resource was deleted manually from the portal)
+
+#####################################################################################################################
+
+FUNCTIONS
+
+to test functions use terraform console
+terraform console and press enter
+max(2,4,6,8)
+
+some common functions
+max(2,4,6,8)
+8
+abs (-9)
+9
+floor(1.3)
+1
+join('-' ["what", "is"])
+what-is
+
+lower("DANISH")
+danish
+upper("danish")
+DANISH
+
+element()
+variable "addrressspace" {
+ value = [10.0.0.1/24.10.1.0.0/16]
+}
+
+e.g  element(var.address_space,1)
+the above directive will select the second address space from
+variable
